@@ -31,27 +31,47 @@
                                 <rect key="frame" x="20" y="201" width="374" height="573"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0U-Hc-dUg">
-                                <rect key="frame" x="144.5" y="163" width="125" height="30"/>
+                                <rect key="frame" x="269" y="163" width="125" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="Rc6-e0-GZm"/>
-                                    <constraint firstAttribute="height" constant="30" id="lRb-eJ-EXu"/>
+                                    <constraint firstAttribute="width" constant="125" id="0iX-4t-rGE"/>
+                                    <constraint firstAttribute="height" constant="30" id="3BL-WJ-LFW"/>
                                 </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxp-yO-GDM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv5-Rc-IHm">
+                                <rect key="frame" x="20" y="168" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="rIL-Fs-2xP"/>
+                                    <constraint firstAttribute="height" constant="21" id="smW-IK-Zcd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Laa-p6-IET">
+                                <rect key="frame" x="119" y="163" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="KeZ-8a-n10"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="d0U-Hc-dUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Das-JQ-3jL"/>
                             <constraint firstItem="DzY-mn-svd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="JhG-Cc-mEp"/>
+                            <constraint firstItem="Laa-p6-IET" firstAttribute="leading" secondItem="Cv5-Rc-IHm" secondAttribute="trailing" constant="8" id="MRm-57-RDI"/>
+                            <constraint firstItem="Cv5-Rc-IHm" firstAttribute="top" secondItem="DzY-mn-svd" secondAttribute="bottom" constant="13" id="QE5-qo-ruF"/>
                             <constraint firstItem="NGX-JE-QGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SR1-Tf-qLe"/>
+                            <constraint firstItem="Laa-p6-IET" firstAttribute="top" secondItem="DzY-mn-svd" secondAttribute="bottom" constant="8" id="TOJ-9H-mwb"/>
+                            <constraint firstItem="Cv5-Rc-IHm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Uhx-3Q-Tpu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NGX-JE-QGC" secondAttribute="bottom" constant="88" id="UrS-rr-y7I"/>
-                            <constraint firstItem="d0U-Hc-dUg" firstAttribute="top" secondItem="DzY-mn-svd" secondAttribute="bottom" constant="8" id="a7c-04-Pey"/>
                             <constraint firstItem="DzY-mn-svd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dOk-XP-uK2"/>
-                            <constraint firstItem="NGX-JE-QGC" firstAttribute="top" secondItem="d0U-Hc-dUg" secondAttribute="bottom" constant="8" id="fKh-At-qGA"/>
+                            <constraint firstItem="d0U-Hc-dUg" firstAttribute="top" secondItem="DzY-mn-svd" secondAttribute="bottom" constant="8" id="kzH-iB-WaC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NGX-JE-QGC" secondAttribute="trailing" constant="20" id="n1Q-Ca-vKj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0U-Hc-dUg" secondAttribute="trailing" constant="20" id="tyZ-3B-bJN"/>
+                            <constraint firstItem="NGX-JE-QGC" firstAttribute="top" secondItem="d0U-Hc-dUg" secondAttribute="bottom" constant="8" symbolic="YES" id="vVK-Ly-7Oz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DzY-mn-svd" secondAttribute="trailing" constant="35" id="ywb-Cf-eAr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +79,7 @@
                     <connections>
                         <outlet property="awesomeImageView" destination="NGX-JE-QGC" id="qKx-wN-yld"/>
                         <outlet property="messageLabel" destination="DzY-mn-svd" id="jaZ-dF-suj"/>
+                        <outlet property="soundSwitch" destination="Laa-p6-IET" id="fAR-aW-XsM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
